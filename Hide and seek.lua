@@ -18,7 +18,7 @@ HighlightMe.FillColor = Color3.new(0, 1, 0)
 local HighlightHideAndSeek = Instance.new("Highlight")
 HighlightHideAndSeek.FillColor = Color3.new(1, 0, 0)
 
-SectionEsp:NewButton("Esp HideAndSeek", "Esp HideAndSeek", function()
+SectionEsp:NewButton("Esp finder", "Esp finder", function()
         for i,a in pairs(game:GetDescendants()) do
 if a.Name == 'Sparkles' then
 HighlightHideAndSeek.Parent = a.Parent.Parent
@@ -26,11 +26,11 @@ end
 end
 end)
 
-SectionEsp2:NewButton("Esp me", "Esp to me", function()
+SectionEsp2:NewButton("Esp is me", "Esp is me", function()
     HighlightMe.Parent = game.Players.LocalPlayer.Character
 end)
 
-SectionFarm:NewButton("Farm Coins", "Up all coins", function()
+SectionFarm:NewButton("Farm All Credit", "Up all Credit", function()
     for i,v in pairs(game:GetDescendants()) do
 if v.Name == 'Credit' then
 v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -46,6 +46,9 @@ SectionMain:NewSlider("Jump power", "You Jump power", 500, 10, function(s)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
+SectionEsp2:NewButton("Telepot Safe", "Teleport Safe zone you", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(322, 156.200012, -35.4000015, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
 
 local HighlightCoins = Instance.new("Highlight")
 HighlightCoins.FillColor = Color3.new(1, 1, 0)
